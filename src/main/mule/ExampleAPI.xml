@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d1835f18-e87d-4aa3-a403-a7bf30fb5a87" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="ExampleAPIFlow" doc:id="69f6a508-9036-4574-99ad-3eb9728fbfb7" >
+		<http:listener doc:name="Listener" doc:id="b2fa8f0f-184a-429b-a006-ed9d01945576" config-ref="HTTP_Listener_config" path="/helloworld"/>
+		<set-payload value="Copado MultiCloud Deployment for MuleSoft" doc:name="Set Payload" doc:id="0bd7e550-487e-44a1-8ada-e9924aaf8366" />
+	</flow>
+</mule>
