@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>ExampleAPI</artifactId>
+	<artifactId>eapi</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 	
-	<name>ExampleAPI</name>
+	<name>eapi</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,6 +49,7 @@
                       <workers>${workerCount}</workers>
                       <workerType>${workerType}</workerType>
                       <objectStoreV2>true</objectStoreV2>
+					  <businessGroupId>e578003b-5a2e-436e-b3af-b449ba53f3f3</businessGroupId>
                     </cloudHubDeployment>
 				</configuration>
 			</plugin>
